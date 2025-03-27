@@ -1,0 +1,207 @@
+/* Style spécifique à la page d'accueil*/
+
+.filter,
+.card {
+    border: solid 1px var(--gray);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+
+/* Conteneur principal des filtres (catégorie, temps, difficulté) + recherche */
+.filter {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .search-input {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 5px;
+        border: solid var(--gray) 2px;
+
+    }
+
+    .search-button {
+        background-color: var(--orange);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+        width: 100%;
+        margin-top: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+/* Filtres latéraux */
+.category,
+.time-prep,
+.difficulty {
+    background-color: var(--gray);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+}
+
+.card {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: auto;
+    margin-inline: 1rem;
+    padding: 0;
+    border-radius: 10px;
+    position: relative;
+
+    /* Conteneur des boutons ❤️ et 🗑️ positionnés en haut à droite */
+    .icon-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        gap: 0.5rem;
+
+        .heart-btn,
+        .delete-btn {
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            top: 10px;
+            right: 10px;
+            border: none;
+            border-radius: 50%;
+            padding: 8px;
+            cursor: pointer;
+        }
+    }
+
+}
+
+/* Forcer les images à remplir leur conteneur sans déformation */
+img {
+    width: auto;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+}
+
+
+.text-content {
+    padding: 10px;
+
+    p {
+        display: inline-block;
+        border-radius: 20px;
+        padding: 5px 10px;
+        margin: 5px 5px;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Masquer le bouton de suppression des favoris sur la page d'accueil */
+body.index-page .delete-btn {
+    display: none;
+}
+
+/* Couleurs dynamiques pour les catégories / temps / difficulté */
+.text-content p:nth-child(2) {
+    background-color: var(--orange);
+    color: white;
+}
+
+.text-content p:nth-child(3) {
+    background-color: var(--green);
+    color: white;
+}
+
+.text-content p:nth-child(4) {
+    background-color: var(--blue);
+    color: white;
+}
+
+/* Bouton "Voir la recette" */
+.card button[type="button"] {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    width: 90%;
+    margin: 10px auto 20px;
+    display: block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.end-part {
+    padding: 1rem;
+}
+
+.links,
+.about-end {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+
+    h3 {
+        color: var(--orange);
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Grille de mise en page à partir de 1024px */
+@media (min-width: 1024px) {
+
+    .search {
+        display: flex;
+
+    }
+
+    .search .search-button {
+        width: 20%;
+        margin: 0;
+    }
+
+
+    .filter-container {
+        display: flex;
+        gap: 50px;
+    }
+
+    .article {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

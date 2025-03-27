@@ -1,0 +1,301 @@
+/*Styles spécifiques à la page recette*/
+
+.heroo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    /* Mise en page centrale du titre, du paragraphe et de l'image */
+    h2,
+    p {
+        text-align: center;
+        padding: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        font-style: italic;
+    }
+
+    img {
+        width: 50%;
+
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--orange);
+}
+
+.difficulty {
+    p {
+        display: inline-block;
+        border-radius: 20px;
+        padding: 5px 10px;
+        font-size: 1rem;
+    }
+}
+
+.difficulty p:first-child {
+    background-color: var(--blue);
+    color: white;
+}
+
+.difficulty p:nth-child(2) {
+    background-color: var(--orange);
+    color: white;
+}
+
+.difficulty p:nth-child(3) {
+    background-color: var(--green);
+    color: white;
+}
+
+.ingredients {
+    margin: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.recipe h3 {
+    text-align: center;
+    color: var(--orange);
+    margin-top: 1rem;
+}
+
+.instructions {
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    li {
+        position: relative;
+        background-color: #fff;
+        padding: 1rem 3rem;
+        font-size: 1rem;
+        line-height: 2;
+    }
+
+    li::before {
+        counter-increment: step;
+        /* Incrémente le compteur à chaque étape */
+        content: counter(step);
+        /* Affiche le numéro automatiquement */
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+        color: var(--orange);
+        border: 2px solid var(--orange);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 22px;
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ce lien invisible permet de rendre toute la carte cliquable */
+.full-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.recipe {
+    text-align: center;
+    margin: 1rem;
+}
+
+.recipe-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-details button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.steps h3 {
+    text-align: center;
+    color: var(--orange);
+}
+
+.steps p {
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem;
+
+}
+
+
+.ingredients {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 800px;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #ffe6b8;
+    border-radius: 10px;
+    list-style-type: disc;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.recipe-card {
+    border: solid 1px var(--gray);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    overflow: hidden;
+    width: 80%;
+    border-radius: 10px;
+    position: relative;
+
+    img {
+        width: 100%;
+        display: block;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .text-content {
+        p {
+            display: inline-block;
+            border-radius: 20px;
+            padding: 1rem 1rem;
+            font-size: 1rem;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            padding: 1rem 1rem;
+        }
+    }
+
+}
+
+/* Mise en page responsive pour les recettes similaires en mode Tablette */
+@media (min-width: 768px) {
+    .similar-recipes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+}
+
+/* Mise en page responsive pour les recettes similaires */
+@media (min-width: 1024px) {
+
+    .similar-recipes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .hero {
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        /* 1. .recipe-details : ligne avec difficulté et bouton ❤️ */
+
+        .difficulty {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .difficulty p {
+            font-size: 1rem;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+
+        h3 {
+            text-align: center;
+            color: orange;
+        }
+
+
+        /* 2. .ingredients bien espacés */
+        .ingredients {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            background-color: var(--gray);
+            border-radius: 10px;
+        }
+
+        /* 3. instructions avec numéros centrés */
+        .instructions {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            list-style: none;
+            counter-reset: step;
+        }
+
+        .instructions li {
+            position: relative;
+            padding-left: 3.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        /* Cercle numéroté centré verticalement */
+        .instructions li::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            background: white;
+            border: 2px solid var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1rem;
+            color: var(--orange);
+        }
+
+    }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Métadonnées essentielles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importation de la police Poppins depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Titre de l'onglet -->
+    <title>Recette</title>
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipe.css">
+    <!-- Fichiers JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/favory_index.js"></script>
+</head>
+
+<body>
+    <header>
+        <section class="hero">
+            <!-- Logo -->
+            <a href="index.html" class="logo"><span>G</span>GourmeTech</a>
+            <!-- Navigation principale -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Ajouter une recette</a></li>
+                    <li><a href="favory.html">Mes Favoris</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bouton pour activer le dark mode -->
+            <button class="moon-icon">🌙</button>
+            <!-- Menu hamburger (visible sur mobile) -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu"> ☰ </button>
+        </section>
+    </header>
+    <main>
+        <section class="container">
+            <!-- Introduction à la recette -->
+            <div class="heroo">
+                <h2>Recette de Tarte aux Pommes</h2>
+                <p>Un dessert simple et délicieux pour toutes les occasions</p>
+                <img src="img/Tarte2.jpg" alt="Tarte aux pommes" class="recipe-image" width="300px">
+            </div>
+
+            <!-- Détails de la recette (catégorie, durée, difficulté) -->
+            <div class="recipe">
+                <div class="recipe-details">
+                    <div class="difficulty">
+                        <p>Dessert</p>
+                        <p>60min</p>
+                        <p>Facile</p>
+                    </div>
+                    <!-- Bouton pour ajouter cette recette aux favoris -->
+                    <button class="heart-btn" aria-label="Ajouter aux favoris">❤️</button>
+                </div>
+            </div>
+
+            <!-- Étapes de la recette -->
+            <section class="steps">
+                <!-- Liste des ingrédients -->
+                <h3>Ingrédients</h3>
+                <ul class="ingredients">
+                    <li>5 pommes (type Granny Smith)</li>
+                    <li>1 pâte brisée</li>
+                    <li>50 g de sucre</li>
+                    <li>30 g de beurre</li>
+                    <li>1 cuil. à soupe de cannelle (optionnel)</li>
+                    <li>1 cuil. à soupe de sucre vanillé</li>
+                </ul>
+
+                <!-- Instructions étape par étape -->
+                <h3>Instructions</h3>
+                <ol class="instructions">
+                    <li>Préchauffez le four à 180°C.</li>
+                    <li>Étalez la pâte brisée dans un moule à tarte.</li>
+                    <li>Épluchez les pommes et coupez-les en fines tranches.</li>
+                    <li>Disposez les tranches de pommes sur la pâte de manière harmonieuse.</li>
+                    <li>Faites fondre le beurre et badigeonnez les pommes avec.</li>
+                    <li>Parsemez de sucre, de sucre vanillé et de cannelle si désiré.</li>
+                    <li>Enfournez pendant 35 à 40 minutes jusqu'à ce que la tarte soit dorée.</li>
+                    <li>Laissez refroidir avant de servir.</li>
+                </ol>
+                <p class="bon-app">Bon appétit !</p>
+            </section>
+
+            <!-- Recettes similaires proposées -->
+            <section class="recipes">
+                <h2>Recettes Similaires</h2>
+                <div class="similar-recipes">
+                    <div class="recipe-card">
+                        <!-- Lien invisible qui recouvre toute la carte pour la rendre cliquable -->
+                        <a href="https://www.marmiton.org/recettes/recette_tarte-tatin_12456.aspx" class="full-link"
+                            aria-label="Voir la recette Tarte Tatin"></a>
+                        <img src="img/Tatin.jpg" alt="Tarte Tatin" width="300px">
+                        <div class="text-content">
+                            <h3>Tarte Tatin</h3>
+                            <p>Une version caramélisée de la tarte aux pommes.</p>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <!-- Lien invisible qui recouvre toute la carte pour la rendre cliquable -->
+                        <a href="https://www.marmiton.org/recettes/recette_compote-de-pommes_63357.aspx"
+                            class="full-link" aria-label="Voir la recette de la compote"></a>
+                        <img src="img/Compote.jpg" alt="Compote de pommes" width="300px">
+                        <div class="text-content">
+                            <h3>Compote de pommes maison</h3>
+                            <p>Une purée de pommes douce et parfumée, parfaite pour le goûter.</p>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card">
+                        <!-- Lien invisible qui recouvre toute la carte pour la rendre cliquable -->
+                        <a href="https://www.marmiton.org/recettes/recette_crumble-simple_12173.aspxl" class="full-link"
+                            aria-label="Voir la recette du crumble"></a>
+                        <img src="img/Crumble.jpg" alt="Crumble aux pommes" width="300px">
+                        <div class="text-content">
+                            <h3>Crumble aux pommes</a></h3>
+                            <p>Un dessert croustillant et gourmand à base de pommes.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; Copyright 2025 - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>

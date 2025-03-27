@@ -1,0 +1,201 @@
+  /* Style général du site */
+  /* Définition des couleurs globales en variables CSS */
+:root {
+    font-size: 16px;
+    --orange: #E97C22;
+    --light-orange: #ffc001;
+    --green: #2ECD70;
+    --blue: #3299DC;
+    --gray: #f1f0f0de;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+ /* Alignement vertical des images dans le flux */
+    img {
+        vertical-align: middle;
+    }
+}
+
+/* Mode sombre activé dynamiquement via JavaScript */
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: var(--light-orange);
+
+    .nav-bar{
+        
+        background-color: #1e1e1e;
+        ul{
+            li{
+                a{
+                    color: white;
+                    &:hover{
+                        color: var(--orange);
+                    }
+                }
+            }
+        }
+    }
+    .moon-icon{
+            background-color: var(--orange);
+        }
+
+    .article button{
+        background-color: var(--orange)
+    }
+
+    .ingredients, .instructions {
+        background-color: #ffe6b8;
+        color: black;
+    }
+
+    .recipe-card{
+        background-color: rgb(62, 62, 62);
+    }
+
+    .accordion p{
+        color: black;
+    }
+
+}
+
+  /* Conteneur avec bord et ombre douce */
+.hero{
+    border: solid 1px var(--gray);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+header {
+    /* Disposition horizontale du logo, menu et icônes */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.2rem;
+        gap: 0.5rem;
+
+        .logo {
+            color: var(--orange);
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            span {
+                background-color: var(--orange);
+                color: white;
+            }
+        }
+
+    }
+
+     /* Style de l'icône lune + alignement à droite */
+    span,
+    .moon-icon {
+        margin-left: auto;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .moon-icon {
+        background-color: #f1f0f0;
+        border: none;
+    }
+
+     /* Bouton burger (mobile) */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+
+    /* Menu masqué par défaut (mobile) */
+    .nav-bar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Menu vertical pour mobile */
+    .nav-bar.open {
+        display: flex;
+    }
+
+    .nav-bar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        li a {
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0;
+            color: black;
+
+            &:hover {
+                color: var(--orange);
+            }
+        }
+    }
+}
+
+footer {
+    background-color: var(--orange);
+    margin-top: 1rem;
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+}
+
+
+/* Responsive à partir de 1024px (tablette/desktop) */
+@media (min-width: 1024px) {
+
+    header {
+        position: relative;
+    }
+     /* Cache le bouton burger en desktop */
+    header .menu-toggle {
+        display: none;
+    }
+
+    /* Menu horizontal visible en desktop */
+    header .nav-bar{
+        width: 80%;
+       position: static;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0;
+       box-shadow: none;
+       ul{
+        flex-direction: row;
+       }
+
+    }
+    .search{
+        display: flex;
+    }
+
+    .search .search-button {
+        width: 20%;
+        margin: 0;
+    }
+}

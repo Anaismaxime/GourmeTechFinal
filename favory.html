@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Métadonnées essentielles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de l'onglet -->
+    <title>Mes Favoris</title>
+    <!-- Importation de la police Poppins depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/favory.css">
+    <!-- Fichiers JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/favory.js"></script>
+</head>
+
+<body class="favory">
+    <header>
+        <section class="hero">
+            <!-- Logo du site -->
+            <a href="index.html" class="logo"><span>G</span>GourmeTech</a>
+
+            <!-- Menu de navigation principal -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Ajouter une recette</a></li>
+                    <li><a href="favory.html">Mes Favoris</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bouton pour activer/désactiver le mode sombre -->
+            <button class="moon-icon">🌙</button>
+
+            <!-- Bouton menu hamburger pour le mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu"> ☰ </button>
+        </section>
+    </header>
+    <main>
+        <!-- Section qui affichera dynamiquement les favoris depuis le localStorage -->
+        <section class="favorites" id="favorites">
+            <h2>Mes recettes favorites</h2>
+            <!-- Conteneur où les cartes de favoris seront injectées par JS -->
+            <div id="favorites-container" class="article"></div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; Copyright 2025 - Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>

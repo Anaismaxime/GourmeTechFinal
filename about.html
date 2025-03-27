@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Métadonnées essentielles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de l'onglet -->
+    <title>À propos</title>
+    <!-- Importation de la police Poppins depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Fichiers JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/accordions.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <section class="hero">
+            <!-- Logo du site -->
+            <a href="index.html" class="logo"><span>G</span>GourmeTech</a>
+            <!-- Menu de navigation principal -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Ajouter une recette</a></li>
+                    <li><a href="favory.html">Mes Favoris</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                </ul>
+            </nav>
+            <!-- Bouton pour activer/désactiver le mode sombre -->
+            <button class="moon-icon">🌙</button>
+            <!-- Bouton menu hamburger pour le mobile -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu"> ☰</button>
+        </section>
+    </header>
+    <main>
+        <!-- Section Informations sur le site -->
+        <section id="about" class="about">
+            <h2>Qui sommes-nous ?</h2>
+            <p>GourmeTech est un site web moderne qui permet aux passionnés de cuisine de découvrir, rechercher et
+                partager des recettes savoureuses et accessibles à tous.</p>
+            <p>Retrouvez des plats inspirants, ajoutez vos propres créations et sauvegardez vos recettes préférées.</p>
+        </section>
+
+        <!-- Section Formulaire de contact -->
+        <section id="contact" class="contact">
+            <h2>Nous contacter</h2>
+            <form id="contact-form" novalidate>
+                <fieldset>
+                    <div>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                    <p id="form-message" style="margin-top: 1rem;"></p>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Section FAQ avec accordéons interactifs -->
+        <section id="faq" class="faq">
+            <h2>Foire Aux Questions (FAQ)</h2>
+            <!-- Conteneur accordéon -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">Comment ajouter une recette ?</button>
+                    <div class="accordion-content">
+                        <p>Vous pouvez ajouter une recette en cliquant sur "Ajouter une recette" dans le menu et en
+                            remplissant le formulaire dédié.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">Comment enregistrer une recette en favori ?</button>
+                    <div class="accordion-content">
+                        <p>Sur la page d’une recette, cliquez sur l’icône "❤️" pour l’ajouter à vos favoris.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">Comment supprimer un favori ?</button>
+                    <div class="accordion-content">
+                        <p>Rendez-vous sur la page "Mes Favoris" et cliquez sur le bouton "Supprimer" à côté de la
+                            recette.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 GourmeTech - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>

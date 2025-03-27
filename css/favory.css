@@ -1,0 +1,11 @@
+/* Styles spécifiques à la page de favoris */
+
+ /* Masque le bouton "ajouter aux favoris" sur la page des favoris, car la recette est déjà enregistrée */
+body.favoris-page .heart-btn {
+    display: none;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+}

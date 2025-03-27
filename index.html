@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Métadonnées essentielles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de l'onglet -->
+    <title>GourmeTech</title>
+    <!-- Importation de la police Poppins depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Feuilles de style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Fichiers JavaScript -->
+    <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/filter.js" defer></script>
+    <script src="js/favory_index.js" defer></script>
+
+</head>
+
+<body class="index-page">
+    <header>
+        <section class="hero">
+            <!-- Logo du site -->
+            <a href="index.html" class="logo"><span>G</span>GourmeTech</a>
+
+            <!-- Navigation principale -->
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">Ajouter une recette</a></li>
+                    <li><a href="favory.html">Mes Favoris</a></li>
+                    <li><a href="about.html">A propos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Bouton d’activation du mode sombre -->
+            <button class="moon-icon">🌙</button>
+
+            <!-- Bouton menu hamburger (visible en mobile) -->
+            <button class="menu-toggle" aria-label="Ouvrir le menu"> ☰ </button>
+        </section>
+    </header>
+    <main>
+
+        <!-- Section des filtres de recherche -->
+        <div class="filter">
+            <div class="heroo">
+                <!-- Formulaire de recherche par mot-clé -->
+                <form class="search">
+                    <input class="search-input" type="search" placeholder="Rechercher une recette..."
+                        aria-label="search">
+                    <button class="search-button" type="submit">Rechercher</button>
+                </form>
+
+                <!-- Filtres par catégorie, temps, difficulté -->
+                <div class="filter-container">
+                    <!-- Filtre par catégorie -->
+                    <section class="category">
+                        <h2>Catégorie</h2>
+                        <form action="#">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="starter" name="category">
+                                <label for="starter"> Entrée</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="dish" name="category">
+                                <label for="dish"> Plat</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="dessert" name="category">
+                                <label for="dessert"> Dessert</label>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Filtre par temps de préparation -->
+                    <section class="time-prep">
+                        <h2>Temps de préparation</h2>
+                        <form action="#">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="fast" name="time">
+                                <label for="fast">Rapide ( &lt; 30 min) </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="medium" name="time">
+                                <label for="medium">Moyen (30-40 min)</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="long" name="time">
+                                <label for="long">Long ( &gt; 60 min)</label>
+                            </div>
+                        </form>
+                    </section>
+
+                    <!-- Filtre par difficulté -->
+                    <section class="difficulty">
+                        <h2>Difficulté</h2>
+                        <form action="#">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="easy" name="difficulty">
+                                <label for="easy">Facile</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="mediumdiff" name="difficulty">
+                                <label for="mediumdiff">Moyen</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="hard" name="difficulty">
+                                <label for="hard">Difficile</label>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section des recettes affichées -->
+        <div class="article">
+            <article class="card" data-id="1" data-category="dessert" data-time="long" data-difficulty="easy">
+                <div class="icon-container">
+                    <!-- Boutons pour ajouter ou supprimer des favoris -->
+                    <button class="heart-btn" aria-label="Ajouter aux favoris">❤️</button>
+                    <button class="delete-btn" aria-label="Supprimer des favoris">🗑️</button>
+                </div>
+                <img src="img/Tarte.jpg" alt=" Tarte aux pommes" width="300px">
+                <div class="text-content">
+                    <h2>Tarte aux Pommes</h2>
+                    <p>Dessert</p>
+                    <p>60 min</p>
+                    <p>Facile</p>
+                </div>
+                <button type="button" onclick="window.location.href='recipe.html'">Voir la recette </button>
+            </article>
+
+            <article class="card" data-id="2" data-category="dish" data-time="medium" data-difficulty="mediumdiff">
+                <div class="icon-container">
+                    <button class="heart-btn" aria-label="Ajouter aux favoris">❤️</button>
+                    <button class="delete-btn" aria-label="Supprimer des favoris">🗑️</button>
+                </div>
+                <img src="img/Ratatouille.jpg" alt="Ratatouille provençale" width="300px">
+                <div class="text-content">
+                    <h2>Ratatouille Provençale</h2>
+                    <p>Plat</p>
+                    <p>45 min</p>
+                    <p>Moyen</p>
+                </div>
+                <button type="button">Voir la recette</button>
+            </article>
+
+            <article class="card" data-id="3" data-category="starter" data-time="fast" data-difficulty="easy">
+                <div class="icon-container">
+                    <button class="heart-btn" aria-label="Ajouter aux favoris">❤️</button>
+                    <button class="delete-btn" aria-label="Supprimer des favoris">🗑️</button>
+                </div>
+                <img src="img/Velouté.jpg" alt="Velouté de potimarron" width="300px">
+                <div class="text-content">
+                    <h2>Velouté de Potimarron</h2>
+                    <p>Entrée</p>
+                    <p>30 min</p>
+                    <p>Facile</p>
+                </div>
+                <button type="button">Voir la recette</button>
+            </article>
+        </div>
+
+        <!-- Bas de page avec liens complémentaires -->
+        <div class="end-part">
+            <section class="links">
+                <h3>Navigation</h3>
+                <a href="index.html">Accueil</a>
+                <a href="#">Ajouter une recette</a>
+                <a href="favory.html">Mes favoris</a>
+                <a href="about.html">A propos</a>
+            </section>
+            <section class="about-end">
+                <h3>A propos de GourmeTech</h3>
+                <p>GourmeTech est une plateforme de recettes culinaires interactive développée dans le cadre d'un projet
+                    pédagogique</p>
+            </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; Copyright 2025 - Tous droits réservés</p>
+    </footer>
+
+</body>
+
+</html>
