@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 GourmeTech
 
 GourmeTech est une application web responsive développée dans le cadre d’un projet pédagogique. Elle permet aux utilisateurs de rechercher, consulter, ajouter aux favoris et gérer des recettes de cuisine.
@@ -47,3 +48,7 @@ Petites recommandations :
 
 
 Projet réalisé par Anaïs Maxime, étudiante en développement web et web mobile chez l'Ecole Europpéenne du Numérique.
+=======
+# GourmeTechFinal
+Tp Final de validation de la partie Front-end de ma formation
+>>>>>>> 8f2f1ffec78ea1a61a1623ae79cd6bcc63d1e806
